@@ -21,7 +21,7 @@ yarn add @nghinv/react-native-app-tour
 or 
 
 ```sh
-npm install @nghinv/react-native-app-tour
+npm install git+https://github.com/roziki-dev/rn-menjangan-app-tour
 ```
 
 ```sh
