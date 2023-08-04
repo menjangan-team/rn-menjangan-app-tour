@@ -3,7 +3,7 @@
  * Copyright (c) 2021 nghinv@lumi.biz
  */
 import type React from 'react';
-import type { TextStyle, TouchableOpacity, View } from 'react-native';
+import type { TextStyle, TouchableOpacity, View, ViewStyle, StyleProp } from 'react-native';
 import type Animated from 'react-native-reanimated';
 
 export type ButtonComponentProps = React.ElementType & (typeof TouchableOpacity | typeof View);
@@ -59,6 +59,14 @@ export type AppTourStepType = {
 
 export type OptionType = {
   nativeModal?: boolean;
+  buttonTitleSkipStyle?: TextStyle;
+  buttonSkipStyle?: StyleProp<ViewStyle>;
+  buttonTitleNextStyle?: TextStyle;
+  buttonNextStyle?: StyleProp<ViewStyle>;
+  buttonTitlePrevStyle?: TextStyle;
+  buttonPrevStyle?: StyleProp<ViewStyle>;
+  buttonTitleFinishStyle?: TextStyle;
+  buttonFinishStyle?: StyleProp<ViewStyle>;
   buttonTitle?: {
     skip?: string;
     prev?: string;
