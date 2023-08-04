@@ -1,4 +1,4 @@
-# @nghinv/react-native-app-tour
+# roziki-dev/rn-menjangan-app-tour
 
 React Native App Tour Library
 
