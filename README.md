@@ -1,6 +1,6 @@
 # roziki-dev/rn-menjangan-app-tour
 
-React Native App Tour Library
+React Native Menjangan App Tour Library
 
 ---
 
