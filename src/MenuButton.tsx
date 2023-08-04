@@ -141,6 +141,8 @@ function MenuButton(props: MenuButtonProps) {
             <ButtonText
               title={options?.buttonTitle?.skip ?? 'Skip'}
               titleColor={options?.buttonTitleColor?.skip}
+              titleStyle={options?.buttonTitleSkipStyle}
+              style={options?.buttonSkipStyle}
               onPress={onSkip}
             />
             {
@@ -148,6 +150,8 @@ function MenuButton(props: MenuButtonProps) {
                 <ButtonText
                   title={options?.buttonTitle?.next ?? 'Next'}
                   titleColor={options?.buttonTitleColor?.next}
+                  titleStyle={options?.buttonTitleNextStyle}
+                  style={options?.buttonNextStyle}
                   onPress={onNextStep}
                 />
               )
@@ -161,6 +165,8 @@ function MenuButton(props: MenuButtonProps) {
             <ButtonText
               title={options?.buttonTitle?.skip ?? 'Skip'}
               titleColor={options?.buttonTitleColor?.skip}
+              titleStyle={options?.buttonTitleSkipStyle}
+              style={options?.buttonSkipStyle}
               onPress={onSkip}
             />
             {
@@ -168,6 +174,8 @@ function MenuButton(props: MenuButtonProps) {
                 <ButtonText
                   title={options?.buttonTitle?.prev ?? 'Previous'}
                   titleColor={options?.buttonTitleColor?.prev}
+                  titleStyle={options?.buttonTitlePrevStyle}
+                  style={options?.buttonPrevStyle}
                   onPress={onPrevious}
                 />
               )
@@ -177,6 +185,8 @@ function MenuButton(props: MenuButtonProps) {
                 <ButtonText
                   title={options?.buttonTitle?.next ?? 'Next'}
                   titleColor={options?.buttonTitleColor?.next}
+                  titleStyle={options?.buttonTitleNextStyle}
+                  style={options?.buttonNextStyle}
                   onPress={onNextStep}
                 />
               )
@@ -192,6 +202,8 @@ function MenuButton(props: MenuButtonProps) {
                 <ButtonText
                   title={options?.buttonTitle?.prev ?? 'Previous'}
                   titleColor={options?.buttonTitleColor?.prev}
+                  titleStyle={options?.buttonTitlePrevStyle}
+                  style={options?.buttonPrevStyle}
                   onPress={onPrevious}
                 />
               )
@@ -199,6 +211,8 @@ function MenuButton(props: MenuButtonProps) {
             <ButtonText
               title={options?.buttonTitle?.finish ?? 'Finish'}
               titleColor={options?.buttonTitleColor?.finish}
+              titleStyle={options?.buttonTitleFinishStyle}
+              style={options?.buttonFinishStyle}
               onPress={onFinish}
             />
           </>
