@@ -12,7 +12,6 @@ import ButtonText from './ButtonText';
 import { useEvent } from './hook';
 
 interface MenuButtonProps {
-  textStep: Animated.SharedValue<string>;
   currentStep: Animated.SharedValue<number>;
   onStop: () => void;
 }
@@ -28,7 +27,7 @@ const OrderState = {
 };
 
 function MenuButton(props: MenuButtonProps) {
-  const { textStep, currentStep, onStop } = props;
+  const { currentStep, onStop } = props;
   const { nodes, scenes, sceneIndex, options } = useContext(AppTourContext);
   const { emitEvent } = useEvent();
   const [orderState, setOrderState] = useState(OrderState.start);
@@ -136,12 +135,6 @@ function MenuButton(props: MenuButtonProps) {
 
   return (
     <View style={styles.viewButton}>
-      <ButtonText
-        title={textStep ?? ''}
-        titleColor={options?.buttonTitleColor?.label}
-        titleStyle={options?.buttonTitleLabelStyle}
-        style={options?.buttonLabelStyle}
-      />
       {
         orderState === OrderState.start && (
           <>

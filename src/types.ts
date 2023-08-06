@@ -93,6 +93,7 @@ export type OptionType = {
   titleShow?: boolean;
   titleStyle?: TextStyle;
   describeStyle?: TextStyle;
+  labelStyle?: TextStyle;
   stepShow?: boolean;
   stepTitleColor?: string;
   stepBackgroundColor?: string;

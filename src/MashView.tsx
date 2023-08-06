@@ -308,11 +308,16 @@ function MashView(props: MashViewProps) {
             animatedProps={animatedPropsDescribe}
           />
         </View>
-        <MenuButton
-          textStep={animatedPropsLabel}
-          currentStep={currentStep}
-          onStop={onStop}
-        />
+        <View style={styles.viewButton}>
+          <AnimateableText
+            style={[styles.txtDescribe, options?.labelStyle]}
+            animatedProps={animatedPropsLabel}
+          />
+          <MenuButton
+            currentStep={currentStep}
+            onStop={onStop}
+          />
+        </View>
       </Animated.View>
       {
         options?.stepShow !== false && (
@@ -401,6 +406,11 @@ const styles = StyleSheet.create({
   },
   childrenButton: {
     flex: 1,
+  },
+  viewButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
 });
 
