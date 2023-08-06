@@ -11,7 +11,7 @@ import { setVector, setVectorLayout, useAppTour, useVector, useVectorLayout } fr
 import type { AppTourStepType } from './types';
 
 function AppTourStep(props: AppTourStepType) {
-  const { children, id, describe, title, maskType = 'rect', scrollTo } = props;
+  const { children, id, describe, title, label, maskType = 'rect', scrollTo } = props;
   const target = useVectorLayout();
   const targetPosition = useVector();
   const { addNode, debug } = useAppTour();
@@ -27,6 +27,7 @@ function AppTourStep(props: AppTourStepType) {
         id,
         title,
         describe,
+        label,
         onPress: children.props.onPress,
         maskType,
         target,
@@ -55,6 +56,7 @@ function AppTourStep(props: AppTourStepType) {
           id,
           title,
           describe,
+          label,
           onPress: children.props.onPress,
           maskType,
           target,

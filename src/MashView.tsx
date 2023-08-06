@@ -235,8 +235,17 @@ function MashView(props: MashViewProps) {
     };
   });
 
+  const animatedPropsLabel = useAnimatedProps(() => {
+    const { node } = getCurrentNode(nodes, scene, currentStep, defaultTarget);
+    const { label } = node;
+
+    return {
+      text: label,
+    };
+  });
+
   return (
-    <View pointerEvents='box-none' style={styles.container}>
+    <View pointerEvents='box-none' style={[styles.container, options?.viewFrameStyle]}>
       <Svg height="100%" width="100%">
         <Defs>
           <Mask id="mask" x="0" y="0" height="100%" width="100%">
@@ -268,6 +277,7 @@ function MashView(props: MashViewProps) {
             borderRadius: options?.borderRadius ?? 5,
           },
           contentStyle,
+          options?.viewAnimatedStyle,
         ]}
         onLayout={onContentLayout}
       >
@@ -281,9 +291,10 @@ function MashView(props: MashViewProps) {
               borderBottomWidth: TriangleHeight,
             },
             triangleStyle,
+            options?.viewTriangleStyle,
           ]}
         />
-        <View style={styles.viewTitle}>
+        <View style={[styles.viewTitle, options?.viewTitleStyle,]}>
           {
             options?.titleShow !== false && (
               <AnimateableText
@@ -298,6 +309,7 @@ function MashView(props: MashViewProps) {
           />
         </View>
         <MenuButton
+          textStep={animatedPropsLabel}
           currentStep={currentStep}
           onStop={onStop}
         />

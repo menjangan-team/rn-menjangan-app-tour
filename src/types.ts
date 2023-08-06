@@ -33,6 +33,7 @@ export type NodeType = {
   id: string;
   title: string;
   describe: string;
+  label: string;
   maskType?: MaskType;
   onPress?: () => void;
   target: TargetType;
@@ -44,6 +45,7 @@ export type AppTourStep = {
   id: string;
   title: string;
   describe: string;
+  label: string;
   maskType?: MaskType;
 }
 
@@ -59,6 +61,8 @@ export type AppTourStepType = {
 
 export type OptionType = {
   nativeModal?: boolean;
+  buttonTitleLabelStyle?: TextStyle;
+  buttonLabelStyle?: StyleProp<ViewStyle>;
   buttonTitleSkipStyle?: TextStyle;
   buttonSkipStyle?: StyleProp<ViewStyle>;
   buttonTitleNextStyle?: TextStyle;
@@ -74,6 +78,7 @@ export type OptionType = {
     finish?: string;
   },
   buttonTitleColor?: {
+    label?: string;
     skip?: string;
     prev?: string;
     next?: string;
@@ -101,6 +106,10 @@ export type OptionType = {
   backAndroidToSkip?: boolean;
   // Default false
   debug?: boolean;
+  viewFrameStyle?: StyleProp<ViewStyle>;
+  viewAnimatedStyle?: StyleProp<ViewStyle>;
+  viewTriangleStyle?: StyleProp<ViewStyle>;
+  viewTitleStyle?: StyleProp<ViewStyle>;
 }
 
 export type SceneDetailType = {

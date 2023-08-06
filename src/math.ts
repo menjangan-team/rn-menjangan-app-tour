@@ -34,6 +34,7 @@ export function getCurrentNode(
     maskType: 'rect',
     title: '',
     describe: '',
+    label: '',
   };
 
   return {
