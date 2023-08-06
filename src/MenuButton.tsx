@@ -12,7 +12,7 @@ import ButtonText from './ButtonText';
 import { useEvent } from './hook';
 
 interface MenuButtonProps {
-  textStep: string;
+  textStep: Animated.SharedValue<string>;
   currentStep: Animated.SharedValue<number>;
   onStop: () => void;
 }
