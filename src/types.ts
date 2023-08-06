@@ -84,12 +84,9 @@ export type OptionType = {
     next?: string;
     finish?: string;
   };
-  // Overlay opacity 0 - 1
-  backdropOpacity?: number;
-  // Default white
-  backgroundColor?: string;
-  // Default = 5
-  borderRadius?: number;
+  backdropOpacity?: number; // Overlay opacity 0 - 1
+  backgroundColor?: string; // Default white
+  borderRadius?: number; // Default = 5
   titleShow?: boolean;
   titleStyle?: TextStyle;
   describeStyle?: TextStyle;
@@ -98,15 +95,11 @@ export type OptionType = {
   stepTitleColor?: string;
   stepBackgroundColor?: string;
   pathAnimated?: boolean;
-  // Default = 20
-  stepHeight?: number;
-  // Default 8
-  triangleHeight?: number;
-  // Default = rgba(255, 255, 255, 0.8). Need set enablePressNode = true in scene
-  colorNodeOnPress?: string;
+  stepHeight?: number; // Default = 20
+  triangleHeight?: number; // Default 8
+  colorNodeOnPress?: string; // Default = rgba(255, 255, 255, 0.8). Need set enablePressNode = true in scene
   backAndroidToSkip?: boolean;
-  // Default false
-  debug?: boolean;
+  debug?: boolean; // Default false
   viewFrameStyle?: StyleProp<ViewStyle>;
   viewAnimatedStyle?: StyleProp<ViewStyle>;
   viewTriangleStyle?: StyleProp<ViewStyle>;
